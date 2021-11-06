@@ -20,9 +20,9 @@ public class GiantSnake extends Monster implements Fighter {
     }
 
     @Override
-    public void attack(Entity monster) {
+    public void attack(Entity m) {
         growl(true);
         System.out.println("     ...and hid in the grass");
-        monster.damage(getForce());
+        m.damage(getForce());
     }
 }
