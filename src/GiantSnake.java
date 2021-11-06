@@ -1,4 +1,4 @@
-public class GiantSnake extends Monster {
+public class GiantSnake extends Monster implements Fighter {
     public static String scream = "Ssssss ";
 
     public GiantSnake(String name) {
@@ -20,9 +20,9 @@ public class GiantSnake extends Monster {
     }
 
     @Override
-    public void attack(Monster monster) {
+    public void attack(Entity m) {
         growl(true);
         System.out.println("     ...and hid in the grass");
-        monster.damage(getForce());
+        m.damage(getForce());
     }
 }

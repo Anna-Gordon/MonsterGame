@@ -1,4 +1,4 @@
-public class Zombie extends Monster {
+public class Zombie extends Monster implements Fighter {
     public static String scream = "Raaaauuughhhh ";
 
     public Zombie(String name) {
@@ -17,7 +17,7 @@ public class Zombie extends Monster {
         super.growl();
     }
 
-    public void attack(Monster monster) {
+    public void attack(Entity monster) {
         this.growl();
         monster.damage(getForce());
     }
