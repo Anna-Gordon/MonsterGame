@@ -1,5 +1,5 @@
 public class Zombie extends Monster implements Fighter {
-    public static String scream = "Raaaauuughhhh ";
+    private static String scream = "Raaaauuughhhh ";
 
     public Zombie(String name) {
         super(name + " the Zombie", 5);
@@ -8,17 +8,16 @@ public class Zombie extends Monster implements Fighter {
 
     public void growl() {
         System.out.print(scream);
-        super.growl();
     }
 
     public void growl(boolean volume) {
         if (volume) System.out.print(scream.toUpperCase());
         else System.out.print(scream);
-        super.growl();
+        growl();
     }
 
-    public void attack(Entity monster) {
+    public void attack(Entity entity) {
         this.growl();
-        monster.damage(getForce());
+        entity.damage(getForce());
     }
 }

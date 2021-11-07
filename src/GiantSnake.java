@@ -1,5 +1,5 @@
 public class GiantSnake extends Monster implements Fighter {
-    public static String scream = "Ssssss ";
+    private static String scream = "Ssssss ";
 
     public GiantSnake(String name) {
         super(name + " the GiantSnake", 7);
@@ -7,7 +7,6 @@ public class GiantSnake extends Monster implements Fighter {
 
     public void growl() {
         System.out.print(scream);
-        super.growl();
     }
 
     public void growl(boolean loud) {
@@ -15,7 +14,7 @@ public class GiantSnake extends Monster implements Fighter {
             growl();
         } else {
             System.out.print(scream.toUpperCase());
-            super.growl();
+            growl();
         }
     }
 
