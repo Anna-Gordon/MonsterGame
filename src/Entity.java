@@ -1,13 +1,11 @@
-public class Entity {
-    protected String name;
-    protected boolean destroyed = false;
-    private int hp = 15;
+abstract class Entity {
+    private String name;
+    private boolean destroyed = false;
+    private int hp = 100;
 
     public Entity(String name) {
         this.name = name;
     }
-
-    public Entity() { this("Entity"); }
 
     public boolean isDestroyed() {
         return destroyed;
