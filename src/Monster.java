@@ -1,4 +1,4 @@
-public abstract class Monster extends Entity {
+public abstract class Monster extends Entity implements Fighter{
     protected int force;
 
     public Monster(String name, int force) {
